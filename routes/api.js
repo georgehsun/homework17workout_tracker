@@ -25,11 +25,11 @@ router.get("/api/workouts/range", (req, res) => {
 // });
 
 // GET method route
-router.get('/api', function(req, res) {
-    res.send('GET request to the homepage')
-});
+// router.get('/api', function(req, res) {
+//     res.send('GET request to the homepage')
+// });
 
-router.get('/api/workouts/:id', function(req, res) {
+router.get('/api/workouts', function(req, res) {
     DB.Workout.find().then(function(data) {
         console.log(data)
         res.json(data)

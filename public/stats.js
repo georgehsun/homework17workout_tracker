@@ -204,7 +204,12 @@ function workoutNames(data) {
 
     data.forEach(workout => {
         workout.exercises.forEach(exercise => {
-            workouts.push(exercise.name);
+            //get the index of the name inside the workout array. This will equal -1 if not already in the array
+            const index = workouts.indexOf(exercise.name);
+            if (index === -1) {
+                //if not in add to array
+                workouts.push(exercise.name);
+            }
         });
     });
 
